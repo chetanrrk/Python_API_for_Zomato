@@ -23,3 +23,9 @@
 **To Install this API**
 
 `pip install zomato-distribution-api==0.2.1`
+
+**To Use this API**
+
+`you have to import the Zomato class`
+
+`create a Zomato's instance for example, z = Zomato(your_key), to access it's methods`
