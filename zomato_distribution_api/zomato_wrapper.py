@@ -33,11 +33,24 @@ class Zomato:
 
         return categories
 
-    def get_city_id(self, city_name, state_name):
+    def get_city_id(self, city_name=None, state_name=None):
         """
         @params: string, city_name.
-        @return: Returns the ID for the city given as input.
+        @return:
+        Returns the ID for the city given as input.
+        If no parameters are passed, returns city id based on current location
         """
+
+        if city_name is None or state_name is None:
+            lat, lon = self.get_geo_coords()
+            headers = {'Accept': 'application/json', 'user-key': self.user_key}
+            r = requests.get(base_url + "cities?lat=" + str(lat) + "&lon=" + str(lon), headers=headers).\
+                content.decode("utf-8")
+            a = json.loads(r)
+            if len(a['location_suggestions']) == 0:
+                raise Exception("current city's ID cannot be found!")
+            else:
+                return a['location_suggestions'][0]['id']
 
         if not city_name.isalpha():
             raise ValueError('InvalidCityName')
