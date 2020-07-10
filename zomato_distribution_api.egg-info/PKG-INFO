@@ -1,6 +1,6 @@
 Metadata-Version: 2.1
 Name: zomato-distribution-api
-Version: 0.2.1
+Version: 0.2.3
 Summary: provides wrapper for the zomato web api
 Home-page: UNKNOWN
 Author: Chetan Raj Rupakheti
@@ -30,8 +30,14 @@ Description: **Greetings!**
         
         **To Install this API**
         
-        `pip install zomato-distribution-api==0.2.1`
+        `pip install zomato-distribution-api==0.2.3`
         
+        
+        **To Use this API**
+        
+        `you have to import the Zomato class`
+        
+        `create a Zomato's instance for example, z = Zomato(your_key), to access it's methods`
 Platform: UNKNOWN
 Requires-Python: >=3
 Description-Content-Type: text/markdown

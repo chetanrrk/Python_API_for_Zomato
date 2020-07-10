@@ -4,7 +4,7 @@ with open("README.md", "r") as f:
       long_description = f.read()
 
 setup(name='zomato_distribution_api',
-      version='0.2.1',
+      version='0.2.3',
       description='provides wrapper for the zomato web api',
       long_description=long_description,
       long_description_content_type='text/markdown',

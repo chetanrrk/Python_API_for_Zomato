@@ -129,7 +129,10 @@ class Zomato:
     def get_cuisines(self, city_id):
         """
         @params: City ID int/str
-        @return: a sorted dictionary by ID of all cuisine IDs and their respective cuisine names.
+        @return:
+        a sorted dictionary by ID of all cuisine IDs and their respective cuisine names.
+        key: cuisine name
+        value: dictionary
         """
 
         self.is_valid_city_id(city_id)
@@ -146,7 +149,8 @@ class Zomato:
         temp_cuisines = {}
         cuisines = {}
         for cuisine in a['cuisines']:
-            temp_cuisines.update({cuisine['cuisine']['cuisine_id']: cuisine['cuisine']['cuisine_name']})
+            # temp_cuisines.update({cuisine['cuisine']['cuisine_id']: cuisine['cuisine']['cuisine_name']})
+            temp_cuisines.update({cuisine['cuisine']['cuisine_name']: cuisine['cuisine']['cuisine_id']})
 
         for cuisine in sorted(temp_cuisines):
             cuisines.update({cuisine: temp_cuisines[cuisine]})

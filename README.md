@@ -22,7 +22,7 @@
 
 **To Install this API**
 
-`pip install zomato-distribution-api==0.2.1`
+`pip install zomato-distribution-api==0.2.3`
 
 
 **To Use this API**
