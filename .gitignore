@@ -1,0 +1,11 @@
+db.sqlite3
+.venv/
+venv/
+.vscode/
+/.venv
+/.vscode
+/app/__pycache__
+/*.pyc
+*.pyc
+/.idea
+.DS_Store
