@@ -4,8 +4,8 @@ venv/
 .vscode/
 /.venv
 /.vscode
-/app/__pycache__
+__pycache__
 /*.pyc
 *.pyc
-/.idea
+.idea
 .DS_Store
